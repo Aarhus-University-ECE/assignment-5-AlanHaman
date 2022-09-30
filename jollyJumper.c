@@ -2,7 +2,7 @@
 #include <stdbool.h>
 #include <malloc.h>
 
-
+,mbj
 
 int isJollyJumber(const int seq[], int size) {
 /*post: answer to exercise 7.a*/
