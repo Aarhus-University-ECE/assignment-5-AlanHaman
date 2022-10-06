@@ -13,7 +13,7 @@ for (int i=0; i<5; i++){
   }
 }
 
-bool circleIsValid(const circle * c) {
+int circleIsValid(const circle * c) {
 /*post: answer to exercise 6.c*/
   if (c->r>0){
     return true; 
