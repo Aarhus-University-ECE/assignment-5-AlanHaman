@@ -4,8 +4,8 @@
 
 void fiveCircles(circle c[]) {
 /*post: returns an array with five circles - solution to 6.b*/
+ struct circle c[4];
 for (int i=0; i<5; i++){
-    struct circle c[4];
     c[i].r=i;
     c[i].p.x=i;
     c[i].p.y=i;
