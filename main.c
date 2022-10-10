@@ -22,16 +22,21 @@ int main(void) {
 	printCircle(c[1]);
 	printf("isValid: %d", circleIsValid(&c[1]));
 
-
-	/*readin the n numbers in the array numbers*/
-// I decided to make some testcases instead of input
-	int seq1[] = {1,4,2,3};
-	isJollyJumber(seq1,4);
-    int seq2 []= {3,4,2,5,1};
-	isJollyJumber(seq2,5);
-	int seq3 []= {7,4,2,5,1};
-	isJollyJumber(seq3,5);
-	
+//excersize 7.b
+	int size;
+  int seq[size];
+  printf("Enter the size of the input");
+  scanf("%d", &size);
+  printf("Enter the sequence of:\n");
+  for (int i=0; i< size; i++){
+    scanf("%d", &seq[i]);
+  }
+  if (isJollyJumber(seq,size)){
+    printf("Is JollyJumber");
+    }
+    else {
+    printf("Is Not JollyJumber");
+    }
 	return 0;
 
 }
