@@ -6,31 +6,24 @@
 
 
 int isJollyJumber(const int seq[], int size) {
-    bool diffs_found[99];
-/*post: answer to exercise 7.a*/
-for (int i =1;i<size;i++){
-int current = seq[i];
-int previous = seq [i-1];
-int  dif =  current - previous;
-if (dif <0){
-    dif = dif* -1;
-}
-
-diffs_found [dif]=true;
-
-
-if (dif ==0||dif >=size){
-printf("Not a jolly jumper \n");
-}
-else 
-{   
-  printf ("is a jollyjumper\n");
+  int array[size - 1];
+  for (int i = 0; i < size - 1; i++)
+    array[i] = 0;
+    
+// loop to calculate the difference between 2 adjacent numbers 
+  for (int i = 0; i < size - 1; i++) {
+    int sum = (seq[i] > seq[i + 1]);
+    seq[i] - seq[i + 1];
+    seq[i + 1] - seq[i];
+      
+// to check if we have a jullyjumper
+    if (sum > 0 && sum < size)
+      array[sum - 1] = 1;
   }
-return 0; 
 
-
-
-}
-
-    return 1;
+  for (int i = 0; i < size; i++) {
+    if (array[i] == 0)
+      return 0;
+  }
+  return 1;
 }
