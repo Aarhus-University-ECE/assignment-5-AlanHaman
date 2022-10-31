@@ -23,20 +23,31 @@ int main(void) {
 	printf("isValid: %d", circleIsValid(&c[1]));
 
 //excersize 7.b
-	int size;
-  int seq[size];
-  printf("Enter the size of the input");
-  scanf("%d", &size);
-  printf("Enter the sequence of:\n");
-  for (int i=0; i< size; i++){
-    scanf("%d", &seq[i]);
-  }
-  if (isJollyJumber(seq,size)){
-    printf("Is JollyJumber");
-    }
-    else {
-    printf("Is Not JollyJumber");
-    }
+	int n; 
+	
+	printf("Insert Length of Jolly Jumper Sequence (n < 100): ");
+	scanf("%d", &n);
+	if (n > 100)
+	{
+		printf("Not Computable");
+		abort();
+	}
+	
+	int *numbers = malloc(sizeof(int) * n); 
+
+	/*readin the n numbers in the array numbers*/
+
+	printf("Insert numbers in sequence:\n");
+	for (int i = 0; i < n; i++)
+	{
+		scanf("%d", &numbers[i]);
+	}
+	
+
+	if (isJollyJumber(numbers, n)) {
+		printf("it is a Jolly Jumper");}
+	else {
+		printf("not a Jolly Jumper");}
 	return 0;
 
 }
